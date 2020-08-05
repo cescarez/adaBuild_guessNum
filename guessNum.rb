@@ -21,16 +21,16 @@ end
 
 #MAIN
 secret_num = rand($lower_limit...$upper_limit)
-guess = -1 #initialize variable
-get_guess(guess)
+guess = get_guess(guess)
 while guess != secret_num
   if guess < secret_num
     puts "You need to guess higher!"
-    get_guess(guess)
   elsif guess > secret_num
     puts "You need to guess lower!"
-    guess = get_guess(guess)
   else
     puts "Error. Goodbye,"
+    exit
   end
+  guess = get_guess(guess)
 end
+puts "You got it! I'm so proud of you!"
