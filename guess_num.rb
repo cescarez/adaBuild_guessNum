@@ -12,7 +12,7 @@ $upper_limit = 1000
 def get_guess(guess)
   puts "Guess a number between #{$lower_limit} and #{$upper_limit - 1}: "
   guess = gets.chomp
-  while ((guess.to_i == 0 && guess.to_s != "0") || (guess.to_i < 0) || (guess.to_i >= 1000))
+  while ((guess.to_i == 0 && guess.to_s != "0") || (guess.to_i < $lower_limit) || (guess.to_i >= $upper_limit))
     puts "Invalid input. Please re-enter a number between #{$lower_limit} and #{$upper_limit - 1}:"
     guess = gets.chomp
   end
