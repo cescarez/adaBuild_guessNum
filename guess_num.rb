@@ -22,6 +22,7 @@ end
 #MAIN
 secret_num = rand($lower_limit...$upper_limit)
 guess = get_guess(guess)
+guess_count = 1
 while guess != secret_num
   if guess < secret_num
     puts "You need to guess higher!"
@@ -32,5 +33,6 @@ while guess != secret_num
     exit
   end
   guess = get_guess(guess)
+  guess_count += 1
 end
-puts "You got it! I'm so proud of you!"
+puts "You got it in #{guess_count} guesses! I'm so proud of you!"
